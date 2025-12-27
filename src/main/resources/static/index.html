@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Security Register - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>🏛️ College Security Register</h1>
+                <p>Digital Hostel & Security Management System</p>
+            </div>
+            
+            <div class="login-tabs">
+                <button class="tab-btn active" onclick="switchTab('guard')">Security Guard</button>
+                <button class="tab-btn" onclick="switchTab('warden')">Warden / Admin</button>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">User ID</label>
+                    <input type="text" id="username" placeholder="Enter your ID" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+                
+                <button type="submit" class="btn-primary">Login</button>
+                
+                <div id="errorMessage" class="error-message"></div>
+            </form>
+            
+            <div class="demo-credentials">
+                <h3>Demo Credentials</h3>
+                <div class="credentials-grid">
+                    <div>
+                        <strong>Guard:</strong> GUARD001 / guard123
+                    </div>
+                    <div>
+                        <strong>Admin:</strong> ADMIN001 / admin123
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/login.js"></script>
+</body>
+</html>

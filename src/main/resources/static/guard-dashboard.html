@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Guard Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <nav class="navbar">
+            <div class="navbar-brand">🛡️ Security Guard Dashboard</div>
+            <div class="navbar-user">
+                <div class="user-info">
+                    <div class="user-name" id="userName"></div>
+                    <div class="user-role" id="userShift"></div>
+                </div>
+                <button class="btn-logout" onclick="logout()">Logout</button>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <div class="stats-grid">
+                <div class="stat-card success">
+                    <div class="stat-label">Today's Entries</div>
+                    <div class="stat-value" id="todayEntries">0</div>
+                </div>
+                <div class="stat-card warning">
+                    <div class="stat-label">Active Students</div>
+                    <div class="stat-value" id="activeStudents">0</div>
+                </div>
+                <div class="stat-card danger">
+                    <div class="stat-label">Active Visitors</div>
+                    <div class="stat-value" id="activeVisitors">0</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">📥 Student Entry</div>
+                <form id="entryForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Student Roll Number</label>
+                            <input type="text" id="entryRollNumber" placeholder="Enter roll number" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-success">Record Entry</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <div class="card-header">📤 Student Exit</div>
+                <form id="exitForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Student Roll Number</label>
+                            <input type="text" id="exitRollNumber" placeholder="Enter roll number" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-secondary">Record Exit</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <div class="card-header">👥 Visitor Registration</div>
+                <form id="visitorForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Visitor Name</label>
+                            <input type="text" id="visitorName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" id="visitorPhone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>ID Type</label>
+                            <input type="text" id="visitorIdType" placeholder="Aadhar/PAN/DL">
+                        </div>
+                        <div class="form-group">
+                            <label>ID Number</label>
+                            <input type="text" id="visitorIdNumber">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Purpose</label>
+                            <input type="text" id="visitorPurpose" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Student Roll Number</label>
+                            <input type="text" id="visitorStudentRoll" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Register Visitor</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <div class="card-header">📋 Today's Entry Log</div>
+                <div class="table-container">
+                    <table id="entryTable">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Roll Number</th>
+                                <th>Name</th>
+                                <th>Hostel</th>
+                                <th>Status</th>
+                                <th>Late Entry</th>
+                            </tr>
+                        </thead>
+                        <tbody id="entryTableBody">
+                            <tr>
+                                <td colspan="6" style="text-align: center;">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">👥 Today's Visitors</div>
+                <div class="table-container">
+                    <table id="visitorTable">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Meeting</th>
+                                <th>Purpose</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="visitorTableBody">
+                            <tr>
+                                <td colspan="6" style="text-align: center;">Loading...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/guard.js"></script>
+</body>
+
+</html>
