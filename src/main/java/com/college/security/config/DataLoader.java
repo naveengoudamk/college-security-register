@@ -15,7 +15,8 @@ import org.springframework.stereotype.Component;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-@Component
+// Temporarily disabled for H2 database - uncomment when using MySQL
+// @Component
 @RequiredArgsConstructor
 public class DataLoader implements CommandLineRunner {
 
