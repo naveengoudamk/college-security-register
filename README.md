@@ -72,7 +72,7 @@ A comprehensive digital solution to replace manual register books at college and
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/college-security-register.git
+git clone https://github.com/naveengoudamk/college-security-register.git
 cd college-security-register
 ```
 
